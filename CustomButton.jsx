@@ -3,15 +3,16 @@ import { StyleSheet, Text, View, FlatList, SectionList, TouchableOpacity } from 
 import { useEffect, useState } from "react";
 
 export default function CustomButton(props) {
-
+ //const buttonPositon=props.buttonPostion;
+ //const {buttonPosition}=props;
 useEffect(()=>{
-    console.log(props.afzal)
+    console.log(props.buttonPosition)
     })
   loginBtnPressed=()=>{
 
   }
 
-  if(props.afzal=='top'){
+  if(props.buttonPosition=='top'){
     return (
         <View>
           <TouchableOpacity style={{backgroundColor:'grey', width:100, height:30, alignItems:'center', justifyContent:'center'}} onPress={loginBtnPressed}>
@@ -19,7 +20,7 @@ useEffect(()=>{
           </TouchableOpacity>
         </View>
       );
-  }else  if(props.afzal=='bottom'){
+  }else  if(props.buttonPosition=='bottom'){
     return (
         <View style={styles.container}>
           <TouchableOpacity style={{backgroundColor:'green', width:100, height:30}} onPress={loginBtnPressed}>
